@@ -1735,7 +1735,7 @@ export default {
         let picUrl = (setTime > uploadTime) ? `${obj.cdn_url}${obj.buyer_collection_qr}` : `${obj.cdn_url}${this.THUMBNAIL_URL}${obj.buyer_collection_qr}`
         return picUrl
       } else {
-        if (obj.item_pic == 'http://cdn.txbbcrm.com/gg/txbb.jpg') return obj.item_pic
+        if (obj.item_pic == 'http://cdn.wangwangdui2021.com/gg/txbb.jpg') return obj.item_pic
         if (obj.item_pic.indexOf(this.CDN_UP_URL) < 0) return obj.item_pic
         let dateSlots = obj.item_pic.split('/')
         let dateStr = `${dateSlots[4]}-${dateSlots[5]}-${dateSlots[6]}`

@@ -12,14 +12,14 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://192.168.100.23:9502/Manager', //晶晶
+        target: 'http://gg.wangwangdui2021.com/Manager', //晶晶
         changeOrigin: true,  //是否跨域
         pathRewrite: {
           '^/api': ''   //需要rewrite重写的,
         }
       },
       '/upload': {
-        target: 'http://cdn.txbbcrm.com',  // 接口域名
+        target: 'http://cdn.wangwangdui2021.com',  // 接口域名
         changeOrigin: true,  //是否跨域
         pathRewrite: {
           '^/upload': ''   //需要rewrite重写的,

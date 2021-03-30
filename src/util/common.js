@@ -2,12 +2,14 @@
 let DAMAINCONFIG = require('./../../config/domainConfig/config')
 const APIURL = `http://${window.location.host}`
 const apiURL = DAMAINCONFIG.APIURL
-const taskDownloadUrl = DAMAINCONFIG.DOWNLOADURL
+//const taskDownloadUrl = DAMAINCONFIG.DOWNLOADURL
+const taskDownloadUrl = 'http://saas.wangwangdui2021.com'
 // const mmURL = DAMAINCONFIG.APIURL + '/mm'
-const mmURL = APIURL + '/mm'
+//const mmURL = APIURL + '/mm'
+const mmURL = 'http://mm.wangwangdui2021.com/mm'
 const PAGE_SIZE = 20
 const CDNURL = DAMAINCONFIG.CDNURL
-const { thisIp } = require('./ip')
+const { thisIp } = '154.204.43.167'
 export default {
   api: process.env.NODE_ENV === 'development' ? '/api' : APIURL + '/Manager',
   PLAT_NAME: DAMAINCONFIG.PLAT_NAME,
@@ -22,7 +24,7 @@ export default {
   OVERTIME: 5,  // 最多重复请求次数
   THUMBNAIL_URL: '/thumb',  // 显示缩略图添加的文件目录
   // cdn 路径
-  CDN_UP_URL: process.env.NODE_ENV == 'development' ? 'http://cdn.txbbcrm.com' : CDNURL,
+  CDN_UP_URL: process.env.NODE_ENV == 'development' ? 'http://cdn.wangwangdui2021.com' : CDNURL,
   UPLOAD_IMAGE_SIZE: 300,
   UPLOAD_IMAGE_QUALITY: 0.3,
   upload: process.env.NODE_ENV === 'development' ? '/upload' : CDNURL,
@@ -199,7 +201,7 @@ export default {
     sid += (id & 0x0000000f) << 4
     sid += (id & 0x000000f0) >> 4
     // sid ^= 11184810
-    sid ^= 2147483648
+    sid ^= 2147483647
     return sid
   },
 

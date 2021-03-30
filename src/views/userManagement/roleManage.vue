@@ -140,6 +140,7 @@ export default {
     this.treeData = this.getRoleTree(arr, asyncRoutes, true)
     this.treeData[0].disabled = true
     this.getRoleList()
+    this.treeData.pop()
   },
 
   methods: {
